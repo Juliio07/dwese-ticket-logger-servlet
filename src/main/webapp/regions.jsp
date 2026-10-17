@@ -20,17 +20,14 @@
  <a
 href="regions?action=edit&id=${region.id}"><fmt:message key="msg.region.edit"
 /></a>
- <form action="regions" method="post"
-style="display:inline;">
+ <form action="regions" method="post"style="display:inline;">
  <input type="hidden" name="action" value="delete"
 />
  <input type="hidden" name="id" value="${region.id}"
 />
  <!-- Cuando una cadena de caracteres incluye a otra
 esta debe llevar comillas simples -->
- <input type="submit" value="<fmt:message
-key='msg.region.delete' />" onclick="return confirm('<fmt:message
-key='msg.region.confirm' />')" />
+ <input type="submit" value="<fmt:message key='msg.region.delete' />" onclick="return confirm('<fmt:message key='msg.region.confirm' />')" />
  </form>
  </td>
  </tr>

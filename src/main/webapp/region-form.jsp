@@ -14,22 +14,21 @@
  <div class="error-message">${errorMessage}</div>
  </c:if>
  <form action="regions" method="post">
- <input type="hidden" name="id" value="${region != null ? region.id :''}" />
- <input type="hidden" name="action" value="${region == null ? 'insert' :'update'}" />
+ <input type="hidden" name="id" value="${region != null ? region.id : ''}" />
+ <input type="hidden" name="action" value="${region == null ? 'insert' : 'update'}" />
  <label for="code"><fmt:message key='msg.region-form.code' />:</label>
  <input type="text" name="code" id="code" value="${region != null ?
 region.code : ''}" required />
  <label for="name"><fmt:message key='msg.region-form.name' />:</label>
- <input type="text" name="name" id="name" value="${region != null ?
-region.name : ''}" required />
+ <input type="text" name="name" id="name" value="${region != null ? region.name : ''}" required />
  <!-- Cuando una cadena de caracteres incluye a otra esta debe llevar
 comillas simples -->
  <c:choose>
  <c:when test="${region == null}">
- <input type="submit" value="<fmt:message key='msg.regionform.create' />" />
+ <input type="submit" value="<fmt:message key='msg.region-form.create' />" />
  </c:when>
  <c:otherwise>
- <input type="submit" value="<fmt:message key='msg.regionform.update' />" />
+ <input type="submit" value="<fmt:message key='msg.region-form.update' />" />
  </c:otherwise>
  </c:choose>
  </form>

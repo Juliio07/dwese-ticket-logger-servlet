@@ -16,10 +16,8 @@ los mensajes del body -->
 <fmt:setBundle basename="messages"/>
 <form action="changeLanguage" method="get">
  <select name="lang" onchange="this.form.submit()">
- <option value="en" ${sessionScope.locale.language == 'en' ? 'selected'
-: ''}>English</option>
- <option value="es" ${sessionScope.locale.language == 'es' ? 'selected'
-: ''}>Español</option>
+ <option value="en" ${sessionScope.locale.language == 'en' ? 'selected' : ''}>English</option>
+ <option value="es" ${sessionScope.locale.language == 'es' ? 'selected' : ''}>Español</option>
  </select>
 </form>
 

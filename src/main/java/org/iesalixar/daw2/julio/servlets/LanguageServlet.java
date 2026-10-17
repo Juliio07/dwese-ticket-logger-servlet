@@ -1,4 +1,5 @@
 package org.iesalixar.daw2.julio.servlets;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -59,8 +60,8 @@ public class LanguageServlet extends HttpServlet {
                         referer);
                 response.sendRedirect(referer);
             } else {
-                // Si no hay cabecera Referer, redirigir a una página por defecto (home, por ejemplo)
-                logger.warn("No se encontró la cabecera Referer, redirigiendo a  la página principal.");
+                // Si no hay cabecera Referer, redirigir a una página por defecto(home, por ejemplo)
+                logger.warn("No se encontró la cabecera Referer, redirigiendo a la página principal.");
                         response.sendRedirect(request.getContextPath() + "/");
             }
         } catch (Exception e) {
@@ -74,3 +75,4 @@ public class LanguageServlet extends HttpServlet {
         logger.info("Saliendo del método doGet del servlet LanguageServlet");
     }
 }
+
